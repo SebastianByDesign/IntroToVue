@@ -5,7 +5,17 @@ const myvm = (() => {
 
     let vue_VM = new Vue({
         data: {
-            message: "Hello from Vue!"
+            message: "Hello from Vue!",
+
+            collection: [
+                { name: "Trevor", role: "prof" },
+                { name: "Justin", role: "coordinator" },
+                { name: "Joe", role: "prof" }
+            ],
+
+            isVisible: false,
+
+            hasError: true
 
         },
 
@@ -16,6 +26,10 @@ const myvm = (() => {
         methods: {
             logLoaded() {
                 console.log('loaded')
+            },
+
+            alertName(name) {
+                console.log(name)
             }
         }
     }).$mount("#app");
